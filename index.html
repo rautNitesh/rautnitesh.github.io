@@ -14,22 +14,25 @@
     }
     h1{
       font-size:100px;
-      color:white;
+      color:#fbe79d;
       font-family: 'Raleway', sans-serif;
+      z-index:2;
+      position: relative;
     }
     h1::after{
       content:"";
       height: 50px;
+      width:100%;
       position: absolute;
-      background-color: yellow;
-      top:25%;
-      left:50%;
+      background-color: #fda212;
+      top:0%;
+      left:0%;
+      z-index:-1;
     }
       .container{
         display:flex;
         width:90%;
         margin:auto;
-        position:relative;
     }
     .LI-profile-badge{
       width:50%;
@@ -37,16 +40,22 @@
     }
     .text-large-container{
       width:50%}
+    h1 span{
+      font-family: 'Syne tactile', sans-serif;
+      color: white;
+    }
     
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap" rel="stylesheet">
+  <link rel="favicon" href="https://lh3.googleusercontent.com/-SqW4gymPwp4/W9WdZ9hLY1I/AAAAAAAAHWI/kqz9-0GP4x0PTq-Z815hd2MdSy3BsYZogCEwYBhgLKtQDAL1OcqyvSxf6lH9sNVuLE32pIkcRdoARmMq33y4df0YK6vIp0T5iU8AxQfcdSkJIEihuXosm3G5KyQjimSw6G2jSpwN9-plD2KDl2tiXhBPgK3GvNXHf1YmNXcXlZnIxfbDRlb7pxofdQSIqfTbrnBHaPSdjNrcZSkjT3CHLxd93qrm_ehvWRQsP41ko7QYEqXOkwge0oorEIzwLPvu6_v_SI5xLlG5smusVqNDlPL_Z3m_QqNJQ2-GWnpUZBe3LAy9Ai5K8RXUH1RdPRO8c0DKW_lgzHPgyaGEayI1EW4B9CnN_UHi5nY20cNKgmflbyygssNv9yaXNPRHMgV8-6R29rWQxD-74NcgRjW7JvnSfyso-iqWqXICHGcSBFKUfsuUi5We_vWiwAUYAo5mbuKM4RaUdXpoPPSH87JamDq5yt4co2H1dAr6aLNbNmPPrHVSIogE3CJbrfhy-dYuFwBMtynVZLqF8prHNg8qCs0doQ5IpT-f4a1vQgOfK2r8kZiZWlL9RjpPbDy5jLlC882OWZ2Vduo6O3lkcb7LEvVRKbVcTYOgYkmFD8IXv9zZtfAwLW-qoZWnMO7VMzgeTsct0sJ2TAq4kXHfZO5esh5lVI6ukMJLg4PwF/w139-h140-p/my%2Blogo.jpg"/>
 </head>
 <body>
   <div class="container">
 <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="rautesh"><a class="LI-simple-link" href='https://np.linkedin.com/in/rautesh?trk=profile-badge'>Nitesh Raut</a></div>
   <div class="text-large-container">
     <h1>
-    Hello, This is Nitesh Raut.
+      Hello, This is <span>Nitesh Raut</span>.
     </h1>
   </div>
   </div>
