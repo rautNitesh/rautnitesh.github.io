@@ -17,14 +17,24 @@
       color:white;
       font-family: 'Raleway', sans-serif;
     }
+    h1::after{
+      content:"";
+      height: 5px;
+      width: 10px;
+      position: absolute;
+      background-color: yellow;
+      top:0;
+      left:0;
+    }
       .container{
         display:flex;
         width:90%;
         margin:auto;
+        position:relative;
     }
     .LI-profile-badge{
       width:50%;
-      margin:auto;
+      text-align:center
     }
     .text-large-container{
       width:50%}
