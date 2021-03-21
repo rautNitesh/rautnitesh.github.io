@@ -140,11 +140,20 @@ footer{
   padding: 20px;
 }
 
-@media screen and (max-width:575px){
+@media screen and (max-width:400px){
   .nav-item{
     font-size: 12px;
   }
-
+  header img{
+    width: 50px;
+   
+  }
+  header{
+    padding: 1rem;
+  }
+.container{
+  width: 100%;
+}
   .hero{
     height: 400px;
     background: linear-gradient(to right, rgb(2, 207, 243), rgb(20, 177, 250));
@@ -155,7 +164,7 @@ footer{
     width: 20%;
   }
   .hero-image img{
-    width: 400px;
+    display: none;
   }
   .hero-content{
     line-height: 40px;
