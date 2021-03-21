@@ -1,14 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;1,400&family=PT+Sans+Caption:wght@700&display=swap');
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 header {
   display: flex !important;
-  justify-content: space-between;
+  justify-content: space-between !important;
   align-items: center;
   padding: 1rem 5rem;
   width: 100%;
@@ -23,6 +28,11 @@ header {
 }
 .nav-menu {
   list-style-type: none;
+}
+
+a{
+  color:black;
+  text-decoration: none;
 }
 .nav-item {
   display: inline-block;
@@ -53,11 +63,52 @@ header {
   font-size: 62px;
   font-weight: 700;
 }
-.hero-content h3{
+
+h3{
   font-size: 28px;
   font-weight: bold;
 }
 
 .hero-content p{
   font-size: 20px;
+}
+.container{
+  width: 80%;
+  margin: auto;
+}
+
+.about{
+  width: 60%;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
+.about h3{
+  font-size: 40px;
+  color: black;
+  position: relative;
+}
+
+.about h3::after{
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  height: 20px;
+  width: 100px;
+  z-index: -1;
+  background: linear-gradient(to right, rgb(2, 207, 243), rgb(20, 177, 250));
+}
+
+.about p{
+  margin-top: 20px;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  justify-content: center;
+}
+
+.mt-5{
+  margin-top: 5rem;
 }
