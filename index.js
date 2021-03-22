@@ -3,6 +3,10 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled-nav", window.scrollY > 250);
 });
 
+const date = new Date();
+const year = date.getFullYear();
+document.querySelector(".date").innerHTML= year;
+
 const job = document.querySelector(".change-text");
 
 job_list = [

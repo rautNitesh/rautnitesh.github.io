@@ -124,7 +124,7 @@ h3{
 }
 
 .card-title h4{
-  margin-top: 20px;
+  margin-top: 40px;
   color: black;
 }
 .card-title p{
@@ -140,7 +140,7 @@ footer{
   padding: 20px;
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:575px){
   .nav-item{
     font-size: 12px;
   }
@@ -152,7 +152,7 @@ footer{
     padding: 1rem;
   }
 .container{
-  width: 100%;
+  width: 90%;
 }
   .hero{
     height: 400px;
@@ -174,13 +174,23 @@ footer{
     font-size: 32px;
     font-weight: 700;
   }
+
+  .project-list{
+    margin-top: 80px;
+    grid-template-columns: 1fr;
+    grid-column-gap: 40px;
+  }
   
-  /* h3{
-    font-size: 28px;
+  h3{
+    font-size: 20px;
     font-weight: bold;
   }
   
   .hero-content p{
-    font-size: 20px;
-  } */
+    font-size: 16px;
+  }
+
+  .about p{
+    font-size: 16px;
+  }
 }
