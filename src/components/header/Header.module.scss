@@ -1,0 +1,22 @@
+.header {
+    padding: 1rem 0;
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            font-size: 44px;
+            font-weight: 700;
+        }
+        nav {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-left: 20px;
+                    font-weight: 500;
+                }
+            }
+
+        }
+    }
+}
