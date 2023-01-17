@@ -1,0 +1,93 @@
+.banner{
+    background: black;
+    color: white;
+    .banner_content{
+        display: flex;
+        align-items: center;
+        .title_description{
+            width: 50%;
+            h1{
+                font-size: 50px;
+                span{
+                    color: #4b51d7;
+                }
+            }
+            p{
+                letter-spacing: 0.88em;
+                color: #4b51d7;
+            }
+        }
+        .hero_image{
+            width: 50%;
+            text-align: end;
+            position: relative;
+            height: 650px;
+            .first_orbit{
+                width: 500px;
+                height: 500px;
+                border: 2px #4b51d7 solid;
+                border-radius: 50%;
+                position: absolute;
+                right: 0;
+                top: 10%;
+                animation: orbitLikeRotation 7000ms linear infinite;
+                .react_logo{
+                    position: absolute;
+                    left: 0;
+                    top: 340px;
+                    width: 80px;
+                    height: 80px;
+                    animation: orbitLikeRotationRev 7000ms linear infinite;
+                }
+                .redux_logo{
+                    top: 430px;
+                    left: 350px;
+                    background: white;
+                    border-radius: 50%;
+                    height: 80px;
+                    width: 80px;
+                    position: absolute;
+                    animation: orbitLikeRotationRev 7000ms linear infinite;
+                }
+                .typescript{
+                    top: 0;
+                    left: 350px;
+                    height: 80px;
+                    width: 80px;
+                    position: absolute;
+                    animation: orbitLikeRotationRev 7000ms linear infinite;
+                }
+                .next{
+                    top: 0;
+                    height: 80px;
+                    width: 80px;
+                    left: 60px;
+                    position: absolute;
+                    animation: orbitLikeRotationRev 7000ms linear infinite;
+                }
+            }
+            img{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+@keyframes orbitLikeRotation {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes orbitLikeRotationRev {
+    100%{
+        transform: rotate(0deg);
+    }
+    0%{
+        transform: rotate(360deg);
+    }
+}
