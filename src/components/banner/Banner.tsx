@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 
 import styles from "./Banner.module.scss"
 import Nitesh from "../../../public/images/nitesh.png"

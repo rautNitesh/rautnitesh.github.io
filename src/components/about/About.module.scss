@@ -4,5 +4,34 @@
         margin: auto;
         text-align: center;
         line-height: 150%;
+        margin-bottom: 100px;
+    }
+    .services{
+        display: grid;
+        // grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fill, 350px);
+        gap:  100px 50px;
+        .service{
+            .service_image{
+                img{
+                    width: 100%;
+                    height: auto;
+                    max-height: 250px;
+                }
+                margin-bottom: 20px;
+            }
+            .service_description{
+                text-align: center;
+                h3{
+                    margin-bottom: 15px;
+                    font-size: 28px;
+                }
+                p{
+                    margin: 0;
+                }
+
+            }
+        }
     }
 }
