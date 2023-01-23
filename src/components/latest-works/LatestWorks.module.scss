@@ -1,4 +1,4 @@
-.about_me{
+.latest_works{
     p{
         max-width: 800px;
         margin: auto;
@@ -6,17 +6,17 @@
         line-height: 150%;
         margin-bottom: 100px;
     }
-    .services{
-        .service{
-            .service_image{
+    .works{
+        .work{
+            .work_image{
                 img{
                     width: 100%;
                     height: auto;
-                    max-height: 250px;
+                    // max-height: 550px;
                 }
                 margin-bottom: 20px;
             }
-            .service_description{
+            .work_description{
                 text-align: center;
                 h3{
                     margin-bottom: 15px;

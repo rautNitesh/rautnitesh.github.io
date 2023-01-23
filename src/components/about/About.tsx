@@ -17,7 +17,7 @@ export default function About() {
                     Bachelors in Computer Science And Information Technology (Bsc. CSIT), Working as a Software Engineer from 2020 while being part of several teams and lead few in different tech stacks delivering results while maintaining consumer Satisfactions.
                 </p>
 
-                <div className={styles.services}>
+                <div className={styles.services+" grid three-column"}>
                     <div className={styles.service}>
                         <div className={styles.service_image}>
                             <Image src={SoftwareDev} alt="frontend development"/>

@@ -13,12 +13,12 @@ export default function Header() {
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <a href="#latest-works">
                             Portfolio
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:rautesh6@gmail.com">
+                        <a href="mailto:contact@niteshraut.com.np">
                             Mail
                         </a>
                     </li>

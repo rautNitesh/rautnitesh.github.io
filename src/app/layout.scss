@@ -52,3 +52,25 @@ section{
         background-image: linear-gradient(to left bottom, black, $primary-dark);
     }
 }
+
+.grid{
+    display: grid;
+    &.three-column{
+        justify-content: center;
+        grid-template-columns: repeat(auto-fill, 350px);
+        gap:  100px 50px;
+    }
+    &.two-column{
+        justify-content: center;
+        grid-template-columns: repeat(auto-fill, 100%);
+        gap:  100px 50px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .grid{
+        &.two-column{
+            grid-template-columns: repeat(auto-fill, 45%);
+        }
+    }
+}
