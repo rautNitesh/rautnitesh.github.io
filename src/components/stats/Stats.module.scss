@@ -1,0 +1,64 @@
+.stats {
+    background: #0a0f1a;
+    border-top: 1px solid rgba(232, 160, 32, 0.1);
+    border-bottom: 1px solid rgba(232, 160, 32, 0.1);
+    padding: 52px 0;
+
+    .stats_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 16px;
+
+        .stat_item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+
+            &:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 40px;
+                background: rgba(232, 160, 32, 0.12);
+            }
+
+            .stat_value {
+                font-family: "Syne", sans-serif;
+                font-size: clamp(40px, 5vw, 52px);
+                font-weight: 800;
+                color: #e8a020;
+                line-height: 1;
+                letter-spacing: -0.04em;
+            }
+
+            .stat_label {
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #6b7a90;
+                text-align: center;
+                line-height: 1.4;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .stats {
+        .stats_grid {
+            grid-template-columns: repeat(4, 1fr);
+
+            .stat_item {
+                &:not(:last-child)::after {
+                    display: block;
+                }
+            }
+        }
+    }
+}

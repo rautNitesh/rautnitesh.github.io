@@ -1,22 +1,152 @@
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     padding: 1rem 0;
+    background: rgba(10, 15, 26, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(232, 160, 32, 0.1);
+
     .content {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         .logo {
-            font-size: 44px;
-            font-weight: 700;
+            font-family: "Syne", sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #f0ede8;
+            cursor: default;
+
+            span {
+                color: #e8a020;
+            }
         }
-        nav {
+
+        .desktop_nav {
             ul {
-                li {
-                    display: inline-block;
-                    margin-left: 20px;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                list-style: none;
+
+                li a {
+                    font-family: "DM Sans", sans-serif;
+                    font-size: 13px;
                     font-weight: 500;
+                    letter-spacing: 0.06em;
+                    text-transform: uppercase;
+                    color: #6b7a90;
+                    padding: 7px 14px;
+                    border-radius: 6px;
+                    transition: all 0.2s ease;
+                    border: 1px solid transparent;
+
+                    &:hover {
+                        color: #f0ede8;
+                        background: rgba(232, 160, 32, 0.07);
+                        border-color: rgba(232, 160, 32, 0.15);
+                        opacity: 1;
+                    }
+
+                    &.mail_link {
+                        color: #e8a020;
+                        border-color: rgba(232, 160, 32, 0.28);
+
+                        &:hover {
+                            background: rgba(232, 160, 32, 0.1);
+                            border-color: #e8a020;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile floating pill — hidden on desktop
+.mobile_nav {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    // Hide desktop nav links on mobile
+    .header .content .desktop_nav {
+        display: none;
+    }
+
+    // Show floating bottom pill
+    .mobile_nav {
+        display: block;
+        position: fixed;
+        bottom: 28px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 200;
+        animation: floatUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+        .pill {
+            display: flex;
+            align-items: center;
+            background: rgba(10, 15, 26, 0.9);
+            border: 1px solid rgba(232, 160, 32, 0.28);
+            border-radius: 100px;
+            padding: 10px 6px;
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(232, 160, 32, 0.06) inset;
+
+            a {
+                font-family: "Syne", sans-serif;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: 0.04em;
+                color: #8892a4;
+                padding: 7px 16px;
+                border-radius: 100px;
+                white-space: nowrap;
+                transition: color 0.2s ease, background 0.2s ease;
+
+                &:hover {
+                    color: #f0ede8;
+                    background: rgba(232, 160, 32, 0.08);
+                    opacity: 1;
+                }
+
+                &.mail_pill {
+                    color: #e8a020;
+                    background: rgba(232, 160, 32, 0.08);
+
+                    &:hover {
+                        background: rgba(232, 160, 32, 0.16);
+                        opacity: 1;
+                    }
                 }
             }
 
+            .sep {
+                width: 1px;
+                height: 14px;
+                background: rgba(232, 160, 32, 0.15);
+                flex-shrink: 0;
+            }
         }
+    }
+}
+
+@keyframes floatUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
     }
 }

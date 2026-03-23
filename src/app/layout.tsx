@@ -1,5 +1,6 @@
 import Footer from "@/components/footer/Footer"
 import Header from "@/components/header/Header"
+import ScrollReveal from "@/components/scroll-reveal/ScrollReveal"
 
 import "./layout.scss"
 
@@ -18,8 +19,9 @@ export default function RootLayout({
       <body>
         <Header/>
         {children}
-        </body>
         <Footer/>
+        <ScrollReveal />
+      </body>
     </html>
   )
 }
