@@ -1,76 +1,148 @@
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
 
-  $primary-dark: #0f182a;
+$bg-deep:       #0a0f1a;
+$bg-dark:       #0d1117;
+$bg-navy:       #0f182a;
+$bg-card:       #131c2e;
+$accent:        #e8a020;
+$accent-light:  #f0c060;
+$text-primary:  #f0ede8;
+$text-muted:    #6b7a90;
+$border-gold:   rgba(232, 160, 32, 0.12);
 
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
-body{
-    font-family: "Montserrat";
+body {
+    font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: white;
+    color: $text-primary;
+    background: $bg-dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-a{
+a {
     color: inherit;
     text-decoration: none;
-    transition: all 0.4s ease;
-    &:hover{
+    transition: all 0.3s ease;
+    &:hover {
         opacity: 0.8;
     }
 }
 
-.section-title{
-    h2{
-        font-size: 34px;
+.section-title {
+    margin-bottom: 24px;
+    h2 {
+        font-family: "Syne", sans-serif;
+        font-size: clamp(32px, 4vw, 48px);
+        font-weight: 800;
         text-align: center;
         margin-bottom: 1rem;
+        letter-spacing: -0.025em;
+        color: $text-primary;
+        span {
+            color: $accent;
+        }
     }
 }
 
-.container{
+.container {
     max-width: 1160px;
     margin: auto;
-    padding: 0 15px;
+    padding: 0 24px;
 }
 
-section{
-    &.with-padding{
-        padding: 50px 0;
+section {
+    &.with-padding {
+        padding: 80px 0;
     }
 }
 
-.bg-primary{
-    background: $primary-dark;
-    &.gradient{
-        background-image: linear-gradient(to left bottom, black, $primary-dark);
+.bg-primary {
+    background: $bg-dark;
+    &.gradient {
+        background-image: linear-gradient(135deg, $bg-dark 0%, $bg-navy 100%);
     }
 }
 
-.grid{
+.grid {
     display: grid;
-    &.three-column{
+    &.three-column {
         justify-content: center;
-        grid-template-columns: repeat(auto-fill, 350px);
-        gap:  100px 50px;
+        grid-template-columns: repeat(auto-fill, 320px);
+        gap: 32px;
     }
-    &.two-column{
+    &.two-column {
         justify-content: center;
         grid-template-columns: repeat(auto-fill, 100%);
-        gap:  100px 50px;
+        gap: 32px;
     }
 }
 
 @media screen and (min-width: 576px) {
-    .grid{
-        &.two-column{
-            grid-template-columns: repeat(auto-fill, 45%);
+    .grid {
+        &.two-column {
+            grid-template-columns: repeat(auto-fill, 47%);
         }
     }
+}
+
+// ─────────────────────────────────────────────
+// SCROLL REVEAL — reusable utility classes
+// Add .reveal (+ optional modifier + data-delay)
+// to any element. ScrollReveal.tsx adds .is-visible
+// when the element enters the viewport.
+// ─────────────────────────────────────────────
+
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+        opacity   0.7s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    // Stagger delays — add data-delay="1|2|3|4" to children
+    &[data-delay="1"] { transition-delay: 90ms;  }
+    &[data-delay="2"] { transition-delay: 180ms; }
+    &[data-delay="3"] { transition-delay: 270ms; }
+    &[data-delay="4"] { transition-delay: 360ms; }
+}
+
+// Slide from left + fade
+.reveal--left {
+    transform: translateX(-24px);
+    &.is-visible { transform: translateX(0); }
+}
+
+// Slide from right + fade
+.reveal--right {
+    transform: translateX(24px);
+    &.is-visible { transform: translateX(0); }
+}
+
+// ─────────────────────────────────────────────
+// PAGE-LOAD keyframes (above-the-fold only)
+// ─────────────────────────────────────────────
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

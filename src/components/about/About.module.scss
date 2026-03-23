@@ -1,32 +1,79 @@
-.about_me{
-    p{
-        max-width: 800px;
-        margin: auto;
+.about_me {
+    background: #0d1117;
+
+    .bio {
+        max-width: 700px;
+        margin: 0 auto 60px;
         text-align: center;
-        line-height: 150%;
-        margin-bottom: 100px;
+        line-height: 1.85;
+        color: #6b7a90;
+        font-size: 15px;
     }
-    .services{
-        .service{
-            .service_image{
-                img{
+
+    .services {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        .service {
+            display: flex;
+            align-items: flex-start;
+            gap: 22px;
+            background: #131c2e;
+            border: 1px solid rgba(232, 160, 32, 0.09);
+            border-radius: 12px;
+            padding: 28px 32px;
+            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                border-color: rgba(232, 160, 32, 0.28);
+                transform: translateY(-4px);
+                box-shadow: 0 20px 44px rgba(0, 0, 0, 0.35);
+            }
+
+            .service_icon {
+                width: 52px;
+                height: 52px;
+                background: rgba(232, 160, 32, 0.07);
+                border: 1px solid rgba(232, 160, 32, 0.14);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                padding: 11px;
+
+                img {
                     width: 100%;
                     height: auto;
-                    max-height: 250px;
+                    filter: sepia(100%) saturate(400%) hue-rotate(5deg) brightness(0.9);
                 }
-                margin-bottom: 20px;
             }
-            .service_description{
-                text-align: center;
-                h3{
-                    margin-bottom: 15px;
-                    font-size: 28px;
-                }
-                p{
-                    margin: 0;
+
+            .service_content {
+                h3 {
+                    font-family: "Syne", sans-serif;
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #f0ede8;
+                    margin-bottom: 10px;
+                    letter-spacing: -0.01em;
                 }
 
+                p {
+                    color: #6b7a90;
+                    font-size: 14px;
+                    line-height: 1.75;
+                }
             }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about_me {
+        .services {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }
