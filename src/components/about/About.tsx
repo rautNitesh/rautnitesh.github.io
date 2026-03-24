@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import styles from "./About.module.scss"
-import SoftwareDev from "../../../public/images/software-development.svg"
-import LatestTech from "../../../public/images/latest-tech.svg"
-import Result from "../../../public/images/result.svg"
+import SoftwareDev from "../../assets/images/software-development.svg"
+import LatestTech from "../../assets/images/latest-tech.svg"
+import Result from "../../assets/images/result.svg"
 
 export default function About() {
     return (
