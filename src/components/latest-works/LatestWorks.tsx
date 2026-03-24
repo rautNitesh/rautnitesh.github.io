@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from "./LatestWorks.module.scss"
 
 const works: { title: string; href: string; image: string; tag: string }[] = [
@@ -31,7 +30,8 @@ export default function LatestWorks() {
                             data-delay={String((i % 3) + 1)}
                         >
                             <div className={styles.work_image}>
-                                <Image src={work.image} alt={work.title} fill style={{ objectFit: 'cover' }} />
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img src={work.image} alt={work.title} style={{ objectFit: 'cover' }} />
                                 <div className={styles.overlay}>
                                     <span className={styles.visit_label}>Visit Site →</span>
                                 </div>

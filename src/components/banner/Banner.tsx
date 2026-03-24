@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from "./Banner.module.scss"
 
 export default function Banner() {
@@ -35,29 +34,32 @@ export default function Banner() {
             </div>
 
             <div className={styles.image_side}>
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                     src="/images/nitesh-image.png"
                     alt="Nitesh Raut — Senior Frontend Developer"
-                    fill
                     style={{ objectFit: 'cover', objectPosition: 'top center' }}
-                    priority
                 />
 
                 <div className={styles.tech_float}>
                     <div className={styles.tech_chip}>
-                        <Image src="/images/react.png" alt="React" width={20} height={20} />
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src="/images/react.png" alt="React" width={20} height={20} />
                         <span>React.js</span>
                     </div>
                     <div className={styles.tech_chip}>
-                        <Image src="/images/next.png" alt="Next.js" width={20} height={20} />
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src="/images/next.png" alt="Next.js" width={20} height={20} />
                         <span>Next.js</span>
                     </div>
                     <div className={styles.tech_chip}>
-                        <Image src="/images/typescript.png" alt="TypeScript" width={20} height={20} />
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src="/images/typescript.png" alt="TypeScript" width={20} height={20} />
                         <span>TypeScript</span>
                     </div>
                     <div className={styles.tech_chip}>
-                        <Image src="/images/redux.png" alt="Redux" width={20} height={20} />
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src="/images/redux.png" alt="Redux" width={20} height={20} />
                         <span>Redux</span>
                     </div>
                 </div>
