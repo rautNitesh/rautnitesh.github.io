@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import styles from "./Banner.module.scss"
-import Nitesh from "../../../public/images/nitesh-image.png"
-import ReactLogo from "../../../public/images/react.png"
-import Redux from "../../../public/images/redux.png"
-import Typescript from "../../../public/images/typescript.png"
-import Next from "../../../public/images/next.png"
+import Nitesh from "../../assets/images/nitesh-image.png"
+import ReactLogo from "../../assets/images/react.png"
+import Redux from "../../assets/images/redux.png"
+import Typescript from "../../assets/images/typescript.png"
+import Next from "../../assets/images/next.png"
 
 export default function Banner() {
     return (

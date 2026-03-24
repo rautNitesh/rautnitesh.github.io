@@ -1,10 +1,10 @@
 import Image, { StaticImageData } from 'next/image'
 import styles from "./LatestWorks.module.scss"
-import Suqo from "../../../public/images/suqo-banner.png"
-import Suggestic from "../../../public/images/suggestic.webp"
-import Siphox from "../../../public/images/siphox-banner.webp"
-import Avec from "../../../public/images/aveainsights-banner.webp"
-import Cor from "../../../public/images/cor-banner.webp"
+import Suqo from "../../assets/images/suqo-banner.png"
+import Suggestic from "../../assets/images/suggestic.webp"
+import Siphox from "../../assets/images/siphox-banner.webp"
+import Avec from "../../assets/images/aveainsights-banner.webp"
+import Cor from "../../assets/images/cor-banner.webp"
 
 const works: { title: string; href: string; image: StaticImageData; tag: string }[] = [
     { title: "Suqo",          href: "https://suqo.ai",                        image: Suqo,      tag: "Web Development" },
