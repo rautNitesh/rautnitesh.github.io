@@ -94,7 +94,8 @@
                 color: #6b7a90;
                 margin-bottom: 28px;
                 position: relative;
-                display: inline-block;
+                display: block;
+                width: fit-content;
                 animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both;
 
                 &::after {
