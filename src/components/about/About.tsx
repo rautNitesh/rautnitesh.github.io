@@ -1,8 +1,5 @@
 import Image from 'next/image'
 import styles from "./About.module.scss"
-import SoftwareDev from "../../assets/images/software-development.svg"
-import LatestTech from "../../assets/images/latest-tech.svg"
-import Result from "../../assets/images/result.svg"
 
 export default function About() {
     return (
@@ -21,7 +18,7 @@ export default function About() {
                 <div className={styles.services}>
                     <div className={`${styles.service} reveal`} data-delay="1">
                         <div className={styles.service_icon}>
-                            <Image src={SoftwareDev} alt="frontend development" />
+                            <Image src="/images/software-development.svg" alt="frontend development" width={48} height={48} />
                         </div>
                         <div className={styles.service_content}>
                             <h3>Frontend Development</h3>
@@ -30,7 +27,7 @@ export default function About() {
                     </div>
                     <div className={`${styles.service} reveal`} data-delay="2">
                         <div className={styles.service_icon}>
-                            <Image src={LatestTech} alt="latest technologies" />
+                            <Image src="/images/latest-tech.svg" alt="latest technologies" width={48} height={48} />
                         </div>
                         <div className={styles.service_content}>
                             <h3>Latest Technology</h3>
@@ -39,7 +36,7 @@ export default function About() {
                     </div>
                     <div className={`${styles.service} reveal`} data-delay="3">
                         <div className={styles.service_icon}>
-                            <Image src={Result} alt="100% end result" />
+                            <Image src="/images/result.svg" alt="100% end result" width={48} height={48} />
                         </div>
                         <div className={styles.service_content}>
                             <h3>100% End Result</h3>

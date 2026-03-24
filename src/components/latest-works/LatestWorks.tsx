@@ -1,17 +1,12 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import styles from "./LatestWorks.module.scss"
-import Suqo from "../../assets/images/suqo-banner.png"
-import Suggestic from "../../assets/images/suggestic.webp"
-import Siphox from "../../assets/images/siphox-banner.webp"
-import Avec from "../../assets/images/aveainsights-banner.webp"
-import Cor from "../../assets/images/cor-banner.webp"
 
-const works: { title: string; href: string; image: StaticImageData; tag: string }[] = [
-    { title: "Suqo",          href: "https://suqo.ai",                        image: Suqo,      tag: "Web Development" },
-    { title: "Suggestic",     href: "https://suggestic.com",                  image: Suggestic, tag: "Web Development" },
-    { title: "SiPhoX Health", href: "https://siphoxhealth.com",               image: Siphox,    tag: "Web Development" },
-    { title: "Aveva Insights",href: "https://insights.aveva-life.com",        image: Avec,      tag: "Web Development" },
-    { title: "COR",           href: "https://corhealth.com",                  image: Cor,       tag: "Web App" },
+const works: { title: string; href: string; image: string; tag: string }[] = [
+    { title: "Suqo",          href: "https://suqo.ai",                 image: "/images/suqo-banner.png",           tag: "Web Development" },
+    { title: "Suggestic",     href: "https://suggestic.com",           image: "/images/suggestic.webp",            tag: "Web Development" },
+    { title: "SiPhoX Health", href: "https://siphoxhealth.com",        image: "/images/siphox-banner.webp",        tag: "Web Development" },
+    { title: "Aveva Insights",href: "https://insights.aveva-life.com", image: "/images/aveainsights-banner.webp",  tag: "Web Development" },
+    { title: "COR",           href: "https://corhealth.com",           image: "/images/cor-banner.webp",           tag: "Web App" },
 ]
 
 export default function LatestWorks() {
@@ -36,7 +31,7 @@ export default function LatestWorks() {
                             data-delay={String((i % 3) + 1)}
                         >
                             <div className={styles.work_image}>
-                                <Image src={work.image} alt={work.title} />
+                                <Image src={work.image} alt={work.title} fill style={{ objectFit: 'cover' }} />
                                 <div className={styles.overlay}>
                                     <span className={styles.visit_label}>Visit Site →</span>
                                 </div>

@@ -1,10 +1,5 @@
 import Image from 'next/image'
 import styles from "./Banner.module.scss"
-import Nitesh from "../../assets/images/nitesh-image.png"
-import ReactLogo from "../../assets/images/react.png"
-import Redux from "../../assets/images/redux.png"
-import Typescript from "../../assets/images/typescript.png"
-import Next from "../../assets/images/next.png"
 
 export default function Banner() {
     return (
@@ -41,7 +36,7 @@ export default function Banner() {
 
             <div className={styles.image_side}>
                 <Image
-                    src={Nitesh}
+                    src="/images/nitesh-image.png"
                     alt="Nitesh Raut — Senior Frontend Developer"
                     fill
                     style={{ objectFit: 'cover', objectPosition: 'top center' }}
@@ -50,19 +45,19 @@ export default function Banner() {
 
                 <div className={styles.tech_float}>
                     <div className={styles.tech_chip}>
-                        <Image src={ReactLogo} alt="React" width={20} height={20} />
+                        <Image src="/images/react.png" alt="React" width={20} height={20} />
                         <span>React.js</span>
                     </div>
                     <div className={styles.tech_chip}>
-                        <Image src={Next} alt="Next.js" width={20} height={20} />
+                        <Image src="/images/next.png" alt="Next.js" width={20} height={20} />
                         <span>Next.js</span>
                     </div>
                     <div className={styles.tech_chip}>
-                        <Image src={Typescript} alt="TypeScript" width={20} height={20} />
+                        <Image src="/images/typescript.png" alt="TypeScript" width={20} height={20} />
                         <span>TypeScript</span>
                     </div>
                     <div className={styles.tech_chip}>
-                        <Image src={Redux} alt="Redux" width={20} height={20} />
+                        <Image src="/images/redux.png" alt="Redux" width={20} height={20} />
                         <span>Redux</span>
                     </div>
                 </div>
