@@ -1,7 +1,6 @@
 import styles from "./LatestWorks.module.scss"
 
 const works: { title: string; href: string; image: string; tag: string }[] = [
-    { title: "Suqo",          href: "https://suqo.ai",                 image: "/images/suqo-banner.png",           tag: "Web Development" },
     { title: "Suggestic",     href: "https://suggestic.com",           image: "/images/suggestic.webp",            tag: "Web Development" },
     { title: "SiPhoX Health", href: "https://siphoxhealth.com",        image: "/images/siphox-banner.webp",        tag: "Web Development" },
     { title: "Aveva Insights",href: "https://insights.aveva-life.com", image: "/images/aveainsights-banner.webp",  tag: "Web Development" },
